@@ -1,0 +1,17 @@
+.style1 {
+    color: orange;
+    font-size: 40px;
+    font-family: Arial;
+}
+
+.style2 {
+    color: rgb(255, 20, 147);
+    font-size: 30px;
+    font-family: 'Comic Sans MS';
+}
+
+.style3 {
+    color: blue;
+    font-size: 25px;
+    font-family: 'Courier New';
+}

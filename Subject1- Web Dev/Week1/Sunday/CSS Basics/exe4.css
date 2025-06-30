@@ -1,0 +1,26 @@
+#container {
+    background-color: #bbb;
+    width: 215px;
+    box-shadow: 5px 5px 10px #555;
+    font-family: Arial;
+}
+
+.box {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border: 2px solid black;
+}
+
+#first {
+    background-color: teal;
+}
+
+#second {
+    background-color: darkorange;
+}
+
+.button {
+    background-color: mediumseagreen;
+    color: black;
+}
