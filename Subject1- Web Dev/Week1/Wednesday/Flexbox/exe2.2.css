@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  border: 1px solid gra
+}
+
+.box {
+  background-color: lightskyblue;
+  color: black;
+  font-size: 18px;
+  margin: 5px;
+  height: 80px;
+}
+
+.box.one {
+  flex-grow: 1;
+}
+
+.box.two,
+.box.three {
+  flex-grow: 2;
+}

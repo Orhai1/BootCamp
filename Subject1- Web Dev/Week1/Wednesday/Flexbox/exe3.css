@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  height: 500px;
+  border: 1px solid lightgray;
+}
+
+.left, .right {
+  flex: 1;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+}
+
+.left {
+  border-right: 1px solid lightgray;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  background-color: lightskyblue;
+  border-radius: 50%;
+}
+
+.right p {
+  max-width: 300px;
+}

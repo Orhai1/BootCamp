@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  height: 500px;
+  border: 2px solid lightcoral;
+}
+
+.left, .right {
+  padding: 20px;
+}
+
+.left {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-start;
+  align-items: flex-end;
+  border-right: 2px solid lightcoral;
+}
+
+.diagram {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bar {
+  width: 60px;
+  height: 10px;
+  background-color: lightcoral;
+}
+
+.bar.short {
+  width: 40px;
+}
+
+.right {
+  display: flex;
+  flex-grow:2;
+  justify-content: center;
+  align-items: center;
+}
+
+.right p {
+  max-width: 400px;
+}

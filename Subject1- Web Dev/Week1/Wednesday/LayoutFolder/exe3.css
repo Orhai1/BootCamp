@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial;
+  background: plum;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: white;
+  border-radius: 15px;
+  padding: 30px 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact h1 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: gray;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+}
+
+textarea {
+  height: 100px;
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+}
+
+button.primary {
+  background-color: #00cfff;
+  color: white;
+}
+
+button.secondary {
+  background-color: #f1f1f1;
+  color: #333;
+}

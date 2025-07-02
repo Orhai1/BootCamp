@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  border: 1px solid gray;
+}
+
+.container .box {
+  flex-grow: 1;
+  background-color: lightskyblue;
+  color: black;
+  font-size: 18px;
+  margin: 5px;
+  height: 80px;
+}

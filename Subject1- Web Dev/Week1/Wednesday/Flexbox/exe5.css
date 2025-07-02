@@ -1,0 +1,49 @@
+body {
+  background: lightgray;
+  font-family: Arial;
+  padding: 30px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.text {
+  margin-bottom: 30px;
+}
+
+.main-row{
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.left {
+  flex: 1;
+}
+
+.big-box {
+  width: 100%;
+  height: 300px;
+  background-color: lightseagreen;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.small-box {
+  flex: 1;
+  height: 130px;
+  background-color: lightseagreen;
+}
