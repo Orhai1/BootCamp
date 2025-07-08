@@ -11,6 +11,16 @@ body {
   color: black;
   background-color: white;
 }
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+}
 
 .container {
   max-width: 1200px;
@@ -31,16 +41,24 @@ body {
   align-items: center;
 }
 
-.name {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
 .nav-menu {
   display: flex;
-  gap: 2rem;
+  gap: 2rem;;
+}
+.nav-menu a {
+   text-decoration: none;
 }
 
+.nav-menu a:hover {
+  color: #007bff;
+}
+.mobile,
+.mobile-nav {
+  display: none;
+}
+.hidden {
+  display: none;
+}
 
 /* First box- general info*/
 .general-info {
@@ -60,12 +78,6 @@ body {
   flex: 1;
   min-width: 300px;
 }
-
-.general-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
 .general-text p {
   margin-bottom: 2rem;
 }
@@ -76,6 +88,7 @@ body {
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -140,9 +153,14 @@ body {
   display: block;
   height: 100%;
   background-color: #007bff;
-  width: 80%;
   border-radius: 5px;
 }
+
+.level-python { width: 100%; }
+.level-js     { width: 90%; }
+.level-react  { width: 90%; }
+.level-node   { width: 85%; }
+.level-mongo  { width: 80%; }
 
 /* Projects box */
 .projects {
@@ -184,9 +202,7 @@ body {
   border-radius: 5px;
 }
 
-.project .btn {
-  text-decoration: none;
-}
+
 
 /* Contact box */
 .contact {
@@ -221,12 +237,6 @@ form input, form textarea {
   flex-direction: column;
   align-items: center; 
   text-align: center;
-}
-
-.contact-info h3 {
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-  font-weight: bold;
 }
 
 .contact-info ul {
@@ -283,3 +293,72 @@ form input, form textarea {
   color: white;
   text-align: center;
 }
+
+.hidden {
+  display: none;
+}
+
+/* Responsive Design for mobile*/
+@media (max-width: 768px) {
+    .nav-menu {
+    display: none;
+  }
+
+   .mobile {
+  display: block;
+  font-size: 1.5rem;
+  cursor: pointer;           
+  border-radius: 8px;     
+}
+
+.mobile:hover {
+  background-color: #e0e0e0;   /* רקע כהה יותר בריחוף */
+}
+
+.mobile-nav:not(.hidden) {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: white;
+  padding: 1rem;
+  position: absolute;
+  top: 70px;
+  right: 1rem;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+  .general-content,
+  .about-content,
+  .contact-content,
+  .project-list {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .general-text {
+    order: 1;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .general-text .btn {
+    margin: 1rem auto 0;
+    display: block;
+  }
+
+  .photo {
+    order: 2;
+    margin-top: 2rem;
+  }
+
+  .photo-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+  .project {
+    width: 100%;
+  }
+  
+}
+

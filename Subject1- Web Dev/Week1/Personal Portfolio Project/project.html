@@ -11,13 +11,21 @@
   <!-- Navigation -->
   <header class="navbar">
     <div class="container">
-      <h1 class="name">Or Haibi</h1>
+      <h3 class="name">Or Haibi</h3>
       <!-- Menu -->
       <nav class="nav-menu">
-        <div class = "about">About</div>
-        <div class = "projects">Projects</div>
-        <div class = "contact">Contact</div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </nav>
+
+      <!-- Menu for mobile -->
+      <div class="mobile" id="mobile"> ☰ </div>
+          <nav class="mobile-nav hidden">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </nav>
     </div>
   </header>
 
@@ -25,9 +33,9 @@
   <section class="general-info">
     <div class="container general-content">
       <div class="general-text">
-        <h2>Full-Stack Developer</h2>
+        <h1>Full-Stack Developer</h1>
         <p>I create beautiful and functional web experiences using modern technologies. Passionate about clean code and user-centered design.</p>
-        <div class="btn">Get in Touch</div> 
+        <a href="#contact" class="btn">Get in Touch</a>
       </div>
       <div class="photo">
         <div class="photo-wrapper">
@@ -46,11 +54,11 @@
       <div class="skills">
         <h3>Skills</h3>
         <ul>
-          <li>Python <div class="bar"><span></span></div></li>
-          <li>JavaScript <div class="bar"><span></span></div></li>
-          <li>React <div class="bar"><span></span></div></li>
-          <li>NodeJS <div class="bar"><span></span></div></li>
-          <li>MongoDB <div class="bar"><span></span></div></li>
+            <li>Python <div class="bar"><span class="level-python"></span></div></li>
+            <li>JavaScript <div class="bar"><span class="level-js"></span></div></li>
+            <li>React <div class="bar"><span class="level-react"></span></div></li>
+            <li>NodeJS <div class="bar"><span class="level-node"></span></div></li>
+            <li>MongoDB <div class="bar"><span class="level-mongo"></span></div></li>
         </ul>
       </div>
     </div>
@@ -68,7 +76,7 @@
           </div>
           <h3> A model for classifying TikTok videos</h3>
           <p>A machine learning model that classifies TikTok videos to which terrorist organization they belong based on their content.</p>
-          <a href="#" class="btn">View Project</a>
+          <a href="https://github.com/Orhai1" target="_blank" class="btn">View Project</a>
         </div>
         <!-- Project 2 -->
         <div class="project">
@@ -77,7 +85,7 @@
           </div>
           <h3>Facebook App</h3>
           <p>A social media app that allows users to connect and share content with friends.</p>
-          <a href="https://github.com/Orhai1/Foobook" class="btn">View Project</a>
+          <a href="https://github.com/Orhai1/Foobook" target="_blank" class="btn">View Project</a>
         </div>
         <!-- Project 3 -->
         <div class="project">
@@ -86,7 +94,7 @@
           </div>
           <h3>Arkanoid Game</h3>
           <p>A classic arcade game built with Java.</p>
-          <a href="https://github.com/Orhai1/Arkanoid-Game" class="btn">View Project</a>
+          <a href="https://github.com/Orhai1/Arkanoid-Game" target="_blank" class="btn">View Project</a>
         </div>
       </div>
     </div>
@@ -123,5 +131,15 @@
       <p>© 2025 Or Haibi. All rights reserved.</p>
     </div>
   </footer>
+
+    <!-- JavaScript for mobile menu toggle -->
+  <script>
+  const mobileBtn = document.getElementById("mobile");
+  const mobileNav = document.querySelector(".mobile-nav");
+
+  mobileBtn.addEventListener("click", () => {
+    mobileNav.classList.toggle("hidden");
+  });
+</script>
   </body>
 </html>
