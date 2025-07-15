@@ -1,0 +1,20 @@
+exe1- 
+print: 8, 1846
+
+exe2-
+print: yearNeptuneDiscovered: 1846, yearMarsDiscovered: 1659
+
+exe3- 
+print: Your name is Alejandro and you like purple
+       Your name is Melissa and you like green
+undefined: Your name is undefined and you like green
+
+exe4- 
+print: Maya
+       Marisa
+       Chi
+
+exe5-
+print: Raindrops on roses
+       whiskers on kittens
+       Bright copper kettles, warm woolen mittens, Brown paper packages tied up with strings       
