@@ -31,3 +31,35 @@ describe('AutoCompleteTrie addWord', () => {
         expect(trie.children['d'].children['o'].children['g']).toBeDefined();
     });
 });
+
+describe('AutoCompleteTrie findWord', () => {
+    let trie;
+
+    beforeEach(() => {
+        trie = new AutoCompleteTrie();
+        trie.addWord('cat');
+        trie.addWord('car');
+        trie.addWord('card');
+    });
+
+    test('should return true for an exact word in the trie', () => {
+        expect(trie.findWord('cat')).toBe(true);
+        expect(trie.findWord('car')).toBe(true);
+        expect(trie.findWord('card')).toBe(true);
+    });
+
+    test('should return false for word not in the trie', () => {
+        expect(trie.findWord('can')).toBe(false);
+        expect(trie.findWord('cart')).toBe(false);
+    });
+
+    test('should return false for a prefix that is not a full word', () => {
+        expect(trie.findWord('ca')).toBe(false);
+    });
+
+    test('should be case insensitive (convert to lowercase)', () => {
+        expect(trie.findWord('CAT')).toBe(true);
+        expect(trie.findWord('Car')).toBe(true);
+        expect(trie.findWord('cArD')).toBe(true);
+    });
+});

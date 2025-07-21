@@ -15,6 +15,17 @@ class AutoCompleteTrie {
         }
         currentNode.endOfWord = true;
     }
+
+    findWord(word) {
+        let currentNode = this;
+        for (let char of word.toLowerCase()) {
+            if (!currentNode.children[char]) {
+                return false;
+            }
+            currentNode = currentNode.children[char];
+        }
+        return currentNode.endOfWord;
+    }
 }
 
 module.exports = AutoCompleteTrie;
