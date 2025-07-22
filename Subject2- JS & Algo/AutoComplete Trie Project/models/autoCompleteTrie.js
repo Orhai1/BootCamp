@@ -26,6 +26,27 @@ class AutoCompleteTrie {
         }
         return currentNode.endOfWord;
     }
+
+    _getRemainingTree(prefix, node = this) {
+        let currentNode = node;
+        for (let char of prefix.toLowerCase()) {
+            if (!currentNode.children[char]) {
+                return null;
+            }
+            currentNode = currentNode.children[char];
+        }
+        return currentNode;
+    }
+
+    _allWordsHelper(prefix, node, allWords) {
+        if (node.endOfWord) {
+            allWords.push(prefix);
+        }
+
+        for (let char in node.children) {
+            this._allWordsHelper(prefix + char, node.children[char], allWords);
+        }
+    }
 }
 
 module.exports = AutoCompleteTrie;
