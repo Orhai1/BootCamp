@@ -47,6 +47,28 @@ class AutoCompleteTrie {
             this._allWordsHelper(prefix + char, node.children[char], allWords);
         }
     }
+
+    predictWords(prefix) {
+        const allWords = [];
+        // Find the node where the prefix ends
+        const node = this._getRemainingTree(prefix, this);
+
+        // If the prefix does not exist in the trie
+        if (!node) {
+            return [];
+        }
+
+        // If the prefix is a word also, so add it
+        if (node.endOfWord) {
+            allWords.push(prefix);
+        }
+
+        // Recursively find all words
+        this._allWordsHelper(prefix, node, allWords);
+
+        return allWords;
+}
+
 }
 
 module.exports = AutoCompleteTrie;

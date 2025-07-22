@@ -100,3 +100,42 @@ describe('AutoCompleteTrie helper methods', () => {
         expect(allWords.sort()).toEqual(['cat', 'car', 'card', 'dog'].sort());
     });
 });
+
+describe('predictWords', () => {
+    let trie;
+
+    beforeEach(() => {
+        trie = new AutoCompleteTrie();
+        trie.addWord("cat");
+        trie.addWord("car");
+        trie.addWord("card");
+        trie.addWord("care");
+        trie.addWord("dog");
+        trie.addWord("dove");
+    });
+
+    test("should return all words with prefix 'ca'", () => {
+        const result = trie.predictWords("ca");
+        expect(result.sort()).toEqual(["cat", "car", "card", "care"].sort());
+    });
+
+    test("should return all words with prefix 'car'", () => {
+        const result = trie.predictWords("car");
+        expect(result.sort()).toEqual(["car", "card", "care"].sort());
+    });
+
+    test("should return only the word when prefix is full word (no children)", () => {
+        const result = trie.predictWords("cat");
+        expect(result).toEqual(["cat"]);
+    });
+
+    test("should return empty array if prefix not found", () => {
+        const result = trie.predictWords("xyz");
+        expect(result).toEqual([]);
+    });
+
+    test("should return all words with prefix 'd'", () => {
+        const result = trie.predictWords("d");
+        expect(result.sort()).toEqual(["dog", "dove"].sort());
+    });
+});
