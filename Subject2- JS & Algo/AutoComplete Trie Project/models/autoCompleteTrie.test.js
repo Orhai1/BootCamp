@@ -1,4 +1,4 @@
-const AutoCompleteTrie = require('../models/AutoCompleteTrie');
+const AutoCompleteTrie = require('../models/autoCompleteTrie');
 
 describe('AutoCompleteTrie addWord', () => {
     let trie;

@@ -58,11 +58,6 @@ class AutoCompleteTrie {
             return [];
         }
 
-        // If the prefix is a word also, so add it
-        if (node.endOfWord) {
-            allWords.push(prefix);
-        }
-
         // Recursively find all words
         this._allWordsHelper(prefix, node, allWords);
 
