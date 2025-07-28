@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AutoComplete Trie Web UI</title>
+  <link rel="stylesheet" href="autoComplete.css">
+</head>
+<body>
+  <div class="form-group">
+    <input id="input" placeholder="Enter a word to add to dictionary" />
+    <button id="add-btn">Add Word</button>
+  </div>
+
+  <div id="add-msg"></div>
+
+  <div class="form-group sec">
+    <input id="search" placeholder="Start typing to see suggestions..." autocomplete="off" />
+    <div id="suggestions" class="suggestions hidden"></div>
+  </div>
+
+  <div class="counter-box">
+    <span id="word-count">0</span>
+    <p>Words in Dictionary</p>
+  </div>
+
+  <script type="module" src="trie.js"></script>
+</body>
+</html>
