@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Company Info</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="loading" class="loading">Loading...</div>
+    <div id="company-info" style="display: none;">
+      <img id="company-logo" alt="Company Logo" />
+      <h1 id="company-name"></h1>
+      <h2 id="stock-price"></h2>
+      <p id="company-description"></p>
+    </div>
+
+    <canvas id="stock-chart" width="600" height="300"></canvas>
+
+  </div>
+
+  <script type="module" src="../controllers/companyController.js"></script>
+</body>
+</html>
