@@ -1,54 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import Landing from "./components/Landing";
+import Home from "./components/Home";
 
-//ex1
-// function App() {
-//     let companies = [
-//     { name: "Tesla", revenue: 140 },
-//     { name: "Microsoft", revenue: 300 },
-//     { name: "Google", revenue: 600 }
-//   ]
-
-//   const showCompany = (name, revenue) => { 
-//     return <div id={name}>  {name} makes  {revenue} every year</div>;
-//   }
-
-//   return (
-//     <div className="ex-space">
-//       <h4 className='ex-title'>Exercise 1</h4>
-//       <div className="exercise" id="ex-1">
-//         {companies.map((company) => (
-//           showCompany(company.name, company.revenue)
-//         ))}
-//       </div>
-//     </div>
-//   )
-// }
-
-//ex2
-function App() {
-  const getClassName = (temperature) => {
-    if (temperature < 15) {
-      return "freezing";
-    } else if (temperature < 30) {
-      return "fair";
-    } else {
-      return "hell-scape";
-    }
-  }
+const App = () => {
+  const [state, setState] = useState( {
+    user: "Robyn",
+    store: [
+      { item: "XSPS Pro Player", price: 800, discount: 0.2, hottest: false },
+      { item: "Gizem Backwatch", price: 230, discount: 0.6, hottest: false },
+      { item: "Surround Sound Pelican", price: 3099, discount: 0.05, hottest: true }
+    ],
+    shouldDiscount: true,
+    currentPage: "Landing"
+  });
+  const ChangePage = (page) => {
+    setState((prev) => ({ ...prev, currentPage: page }));
+  };
 
   return (
-    <div className="ex-space">
-      <h4 className='ex-title'>Exercise 2</h4>
-      <div className="exercise" id="ex-2">
-        <div id = "weatherBox" className={getClassName(30)}>
-          The weather is {getClassName(30)}
-        </div>
-      </div>
-    </div>
-  )
-}
 
-export default App
+    // //ex2
+    // <div>
+    //     <Landing user={state.user} store={state.store} />
+    //     <Home store={state.store} />
+      
+    // </div>
+
+
+    //ex3 + ex4
+    <>
+      <div>
+        <button onClick={() => ChangePage("landing")}>Landing</button>
+        <button onClick={() => ChangePage("home")}>Home</button>
+      </div>
+
+      {state.currentPage === "landing" ? (
+        <Landing user={state.user} store={state.store} />
+      ) : (
+        <Home store={state.store} shouldDiscount={state.shouldDiscount} />
+      )}
+    </>
+  );
+};
+
+export default App;
