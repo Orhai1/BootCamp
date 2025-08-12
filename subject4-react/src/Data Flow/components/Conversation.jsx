@@ -1,12 +1,12 @@
 import React from "react";
 
-const Conversation= ({withName, messages = []}) => {
+const Conversation= ({sender, convo = []}) => {
   return (
     <div>
-      <h2>Conversation with {withName}</h2>
-      {messages.map((message, i) => (
+      <h2>Conversation with {sender}</h2>
+      {convo.map((message, i) => (
         <p key={i}>
-          {(message.sender === "self" ? "Me" : withName) + ": " + message.text}
+          {(message.sender === "self" ? "Me" : sender) + ": " + message.text}
         </p>
       ))}
     </div>

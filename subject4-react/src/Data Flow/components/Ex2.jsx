@@ -42,7 +42,7 @@ const Ex2= () =>  {
       {state.displayConversation === null ? (
         <List contacts={state.conversations.map((c) => c.with)} display={displayConvo}/>
       ) : (
-        <Conversation withName={active.with} messages={active.convo}/>
+        <Conversation sender={active.with} convo={active.convo}/>
       )}
     </div>
   );
