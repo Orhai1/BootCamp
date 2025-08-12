@@ -33,13 +33,16 @@ const Ex2= () =>  {
     ]
   });
 
-
+  const displayConvo = (name) => {
+    setState(prev => ({ ...prev, displayConversation: name }));
+  };
+  const active = state.conversations.find(c => c.with === state.displayConversation);
   return (
     <div className="container">
       {state.displayConversation === null ? (
-        <List contacts={state.conversations.map((c) => c.with)}/>
+        <List contacts={state.conversations.map((c) => c.with)} display={displayConvo}/>
       ) : (
-        <Conversation/>
+        <Conversation withName={active.with} messages={active.convo}/>
       )}
     </div>
   );

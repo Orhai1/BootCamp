@@ -1,12 +1,11 @@
 import React from "react";
 import Contact from "./Contact";
 
-const List= ({contacts}) => {
+const List= ({contacts, display }) => {
   return (
     <div>
-      <h2>Contacts</h2>
       {contacts.map((c)=> (
-        <Contact name = {c}/>
+        <Contact name = {c} display={display}/>
       ))}
     </div>
   );

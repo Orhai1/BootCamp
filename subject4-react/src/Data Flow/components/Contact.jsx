@@ -1,10 +1,10 @@
 import React from "react";
 
-const Contact= ({name}) => {
+const Contact= ({name, display}) => {
   return (
-    <div>
+    <button onClick={() => display(name)}>
       {name}
-    </div>
+    </button>
   );
 }
 
