@@ -36,13 +36,18 @@ const Ex2= () =>  {
   const displayConvo = (name) => {
     setState(prev => ({ ...prev, displayConversation: name }));
   };
+
+  const backToList = () => {
+  setState(prev => ({ ...prev, displayConversation: null }));
+  };
+
   const active = state.conversations.find(c => c.with === state.displayConversation);
   return (
     <div className="container">
       {state.displayConversation === null ? (
         <List contacts={state.conversations.map((c) => c.with)} display={displayConvo}/>
       ) : (
-        <Conversation sender={active.with} convo={active.convo}/>
+        <Conversation sender={active.with} convo={active.convo} back={backToList}/>
       )}
     </div>
   );

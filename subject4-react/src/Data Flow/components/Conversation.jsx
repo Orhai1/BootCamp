@@ -1,6 +1,6 @@
 import React from "react";
 
-const Conversation= ({sender, convo = []}) => {
+const Conversation= ({sender, convo = [], back}) => {
   return (
     <div>
       <h2>Conversation with {sender}</h2>
@@ -9,6 +9,8 @@ const Conversation= ({sender, convo = []}) => {
           {(message.sender === "self" ? "Me" : sender) + ": " + message.text}
         </p>
       ))}
+
+      <button className="back" onClick={back}>Back</button>
     </div>
   );
 }
