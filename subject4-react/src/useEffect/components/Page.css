@@ -1,0 +1,15 @@
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  
+}
+
+.header {
+  text-align: center;
+}
+
+.postsGrid{
+  flex-direction: column;
+  align-items: center;
+}
